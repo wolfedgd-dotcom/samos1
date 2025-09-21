@@ -352,13 +352,13 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { service: "Adult Cut", description: "Professional haircut and styling" },
-              { service: "Kids' Cut", description: "Patient, kid-friendly service" },
-              { service: "Cut + Beard", description: "Complete grooming package" }
+              { service: "Adult Cut", description: "Professional haircut and styling", action: () => scrollToSection('contact') },
+              { service: "Kids' Cut", description: "Patient, kid-friendly service", action: () => scrollToSection('contact') },
+              { service: "Cut + Beard", description: "Complete grooming package", action: () => scrollToSection('contact') }
             ].map((option, index) => (
               <button 
                 key={index}
-                onClick={() => setSelectedService(option.service)}
+                onClick={option.action}
                 className={`p-6 rounded-xl transition-colors ${
                   selectedService === option.service 
                     ? 'bg-white text-red-500' 
@@ -566,83 +566,35 @@ function App() {
             <p className="text-xl text-gray-600">Get in touch to schedule or ask questions</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                  <input 
-                    type="tel" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="Your phone number"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Service</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
-                    <option>Select a service</option>
-                    <option>Adult Haircut</option>
-                    <option>Kids' Cut</option>
-                    <option>Beard Trim</option>
-                    <option>Cut + Beard Combo</option>
-                    <option>Hot Towel Shave</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea 
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="Any special requests or just want to chat?"
-                  />
-                </div>
-                <button 
-                  type="submit"
-                  className="w-full bg-red-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-600 transition-colors"
+          <div className="max-w-2xl mx-auto text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center justify-center space-x-3">
+                <Phone className="h-6 w-6 text-red-500" />
+                <a href="tel:818-324-4056" className="text-lg text-red-500 hover:text-red-600 transition-colors">
+                  Call Us: (818) 324-4056
+                </a>
+              </div>
+              <div className="flex items-center justify-center space-x-3">
+                <Instagram className="h-6 w-6 text-red-500" />
+                <a 
+                  href="https://instagram.com/samoscuts" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-lg text-red-500 hover:text-red-600 transition-colors"
                 >
-                  Send Message
-                </button>
-              </form>
+                  Text on Instagram
+                </a>
+              </div>
             </div>
 
-            <div className="lg:pl-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-6 w-6 text-red-500" />
-                  <a href="tel:818-324-4056" className="text-lg text-red-500 hover:text-red-600 transition-colors">
-                    Call Us: (818) 324-4056
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Instagram className="h-6 w-6 text-red-500" />
-                  <a 
-                    href="https://instagram.com/samoscuts" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-lg text-red-500 hover:text-red-600 transition-colors"
-                  >
-                    Follow on Instagram
-                  </a>
-                </div>
-              </div>
-
-              <div className="bg-red-50 rounded-xl p-6 border border-red-100">
-                <h4 className="font-bold text-gray-900 mb-2">Quick Response</h4>
-                <p className="text-gray-700 text-sm">
-                  We respond quickly during business hours. 
-                  For same-day appointments, please call directly.
-                </p>
-              </div>
+            <div className="bg-red-50 rounded-xl p-6 border border-red-100">
+              <h4 className="font-bold text-gray-900 mb-2">Quick Response</h4>
+              <p className="text-gray-700 text-sm">
+                We respond quickly during business hours. 
+                For same-day appointments, please call directly.
+              </p>
             </div>
           </div>
         </div>
