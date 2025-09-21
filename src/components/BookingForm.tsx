@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 interface BookingFormProps {
   selectedService?: string;
@@ -19,6 +19,7 @@ export default function BookingForm({ selectedService = '', onClose }: BookingFo
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const services = [
     'Adult Haircut - $25',
@@ -39,34 +40,35 @@ export default function BookingForm({ selectedService = '', onClose }: BookingFo
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
 
     try {
-      // Send email using EmailJS
+      // Initialize EmailJS with public key
+      emailjs.init('YOUR_PUBLIC_KEY'); // This will be replaced with actual key
+
       const templateParams = {
         to_email: 'samoscutz@gmail.com',
         from_name: formData.name,
         from_phone: formData.phone,
-        from_email: formData.email,
+        from_email: formData.email || 'No email provided',
         service: formData.service,
         preferred_date: formData.date,
         preferred_time: formData.time,
         message: formData.message || 'No special requests',
-        subject: `New Booking Request - ${formData.name}`
+        reply_to: formData.email || formData.phone
       };
 
-      // Replace these with your actual EmailJS credentials
+      // Send email using EmailJS
       await emailjs.send(
-        'YOUR_SERVICE_ID', // You'll need to set this up in EmailJS
-        'YOUR_TEMPLATE_ID', // You'll need to create a template
-        templateParams,
-        'YOUR_PUBLIC_KEY' // Your EmailJS public key
+        'service_samos_cuts', // Service ID
+        'template_booking',    // Template ID
+        templateParams
       );
       
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error sending booking request:', error);
-      // For now, we'll simulate success since EmailJS isn't configured yet
-      setIsSubmitted(true);
+      setError('Unable to send booking request. Please call us directly at (818) 324-4056');
     } finally {
       setIsSubmitting(false);
     }
@@ -112,6 +114,12 @@ export default function BookingForm({ selectedService = '', onClose }: BookingFo
   return (
     <div className="bg-white rounded-xl p-8 max-w-md mx-auto">
       <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Book Your Appointment</h3>
+      
+      {error && (
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4">
+          {error}
+        </div>
+      )}
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
