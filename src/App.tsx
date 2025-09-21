@@ -114,7 +114,7 @@ function App() {
                 <div className="text-center">
                   <div className="relative">
                     <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
-                    <Scissors className="w-32 h-32 relative z-10 text-red-500" />
+                    <img src="/src/assets/image-removebg-preview.png" alt="Samos Cuts Logo" className="w-32 h-32 relative z-10" />
                   </div>
                   <p className="text-red-100 text-lg font-bold mt-4">Samos Cuts</p>
                 </div>
