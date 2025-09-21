@@ -114,11 +114,11 @@ function App() {
 
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center shadow-2xl">
-                <div className="text-center">
+                <div className="w-40 h-40 bg-white rounded-full flex items-center justify-center">
                   <img 
                     src="/src/assets/image-removebg-preview.png" 
                     alt="Samos Cuts Logo" 
-                    className="w-32 h-32 mx-auto"
+                    className="w-32 h-32"
                   />
                 </div>
               </div>
