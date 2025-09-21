@@ -507,13 +507,6 @@ function App() {
                   Call Now
                 </a>
               </div>
-              <div className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center shadow-lg">
-                <div className="text-center">
-                  <Scissors className="h-16 w-16 mx-auto mb-4 text-red-500" />
-                  <p className="text-red-600 font-bold">The Spot</p>
-                  <p className="text-sm text-red-500">Woodland Hills</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
