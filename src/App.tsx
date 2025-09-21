@@ -249,10 +249,10 @@ function App() {
               </div>
               
               <button 
-                onClick={() => scrollToSection('book')}
+                onClick={() => scrollToSection('contact')}
                 className="bg-red-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-red-600 transition-colors"
               >
-                Book Your Cut
+                Get Your Cut
               </button>
             </div>
           </div>
