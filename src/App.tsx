@@ -451,7 +451,7 @@ function App() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            <div>
+            <div className="max-w-2xl mx-auto">
               <div className="bg-red-50 rounded-xl p-8 border border-red-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Find Us Here</h3>
                 
@@ -503,14 +503,6 @@ function App() {
                   >
                     Call Now
                   </a>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center shadow-lg">
-                <div className="text-center">
-                  <Scissors className="h-16 w-16 mx-auto mb-4 text-red-500" />
                 </div>
               </div>
             </div>
