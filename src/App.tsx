@@ -20,12 +20,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <div className="relative">
-                <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
                 <img 
                   src="/src/assets/image-removebg-preview.png" 
                   alt="Samos Cuts Logo" 
-                  className="w-10 h-10 relative z-10"
+                  className="w-8 h-8"
                 />
               </div>
               <span className="text-2xl font-bold text-gray-900">Samos Cuts</span>
@@ -596,12 +595,11 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                   <img 
                     src="/src/assets/image-removebg-preview.png" 
                     alt="Samos Cuts Logo" 
-                    className="w-8 h-8 relative z-10"
+                    className="w-6 h-6"
                   />
                 </div>
                 <span className="text-2xl font-bold">Samos Cuts</span>
