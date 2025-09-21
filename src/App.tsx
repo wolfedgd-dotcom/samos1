@@ -34,7 +34,7 @@ function App() {
               <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-red-500 transition-colors">About</button>
               <button onClick={() => scrollToSection('location')} className="text-gray-700 hover:text-red-500 transition-colors">Location</button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-red-500 transition-colors">Contact</button>
-              <button onClick={() => scrollToSection('book')} className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition-colors">Book Now</button>
+              <a href="tel:818-324-4056" className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition-colors">Call Now</a>
             </div>
 
             <button 
@@ -56,7 +56,7 @@ function App() {
               <button onClick={() => scrollToSection('about')} className="block px-3 py-2 text-gray-700 hover:text-red-500">About</button>
               <button onClick={() => scrollToSection('location')} className="block px-3 py-2 text-gray-700 hover:text-red-500">Location</button>
               <button onClick={() => scrollToSection('contact')} className="block px-3 py-2 text-gray-700 hover:text-red-500">Contact</button>
-              <button onClick={() => scrollToSection('book')} className="block mx-3 my-2 bg-red-500 text-white px-6 py-2 rounded-lg text-center">Book Now</button>
+              <a href="tel:818-324-4056" className="block mx-3 my-2 bg-red-500 text-white px-6 py-2 rounded-lg text-center">Call Now</a>
             </div>
           </div>
         )}
@@ -77,10 +77,10 @@ function App() {
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button 
-                  onClick={() => scrollToSection('book')} 
+                  onClick={() => scrollToSection('contact')} 
                   className="bg-white text-red-500 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Book an Appointment
+                  Get Your Cut
                 </button>
                 <a 
                   href="tel:818-324-4056" 
