@@ -28,6 +28,9 @@ function App() {
                   className="w-10 h-10 relative z-10"
                 />
               </div>
+                  className="w-10 h-10 relative z-10"
+                />
+              </div>
               <span className="text-2xl font-bold text-gray-900">Samos Cuts</span>
             </div>
             
@@ -454,64 +457,59 @@ function App() {
             <p className="text-xl text-gray-600">Visit us in Woodland Hills</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <div className="bg-red-50 rounded-xl p-8 border border-red-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Find Us Here</h3>
-                
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="h-6 w-6 text-red-500 mt-1" />
-                    <div>
-                      <p className="font-bold text-gray-900">The Address</p>
-                      <p className="text-gray-700">6043 Lockhurst Dr<br />Woodland Hills, CA 91367</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <Clock className="h-6 w-6 text-red-500 mt-1" />
-                    <div>
-                      <p className="font-bold text-gray-900">When We're Cutting</p>
-                      <p className="text-gray-700">
-                        Mon-Sat: 9:00 AM - 7:00 PM<br />
-                        Sun: 12:00 PM - 5:00 PM
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <Phone className="h-6 w-6 text-red-500 mt-1" />
-                    <div>
-                      <p className="font-bold text-gray-900">Call Us</p>
-                      <a href="tel:818-324-4056" className="text-red-500 hover:text-red-600 transition-colors">
-                        (818) 324-4056
-                      </a>
-                    </div>
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-red-50 rounded-xl p-8 border border-red-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Find Us Here</h3>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="h-6 w-6 text-red-500 mt-1" />
+                  <div>
+                    <p className="font-bold text-gray-900">The Address</p>
+                    <p className="text-gray-700">6043 Lockhurst Dr<br />Woodland Hills, CA 91367</p>
                   </div>
                 </div>
-
-                <p className="text-sm text-gray-600 mb-6">Street parking available</p>
-
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="https://maps.google.com/?q=6043+Lockhurst+Dr+Woodland+Hills+CA+91367" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-red-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-600 transition-colors text-center"
-                  >
-                    Get Directions
-                  </a>
-                  <a 
-                    href="tel:818-324-4056"
-                    className="bg-red-100 text-red-600 px-6 py-3 rounded-lg font-bold hover:bg-red-200 transition-colors text-center"
-                  >
-                    Call Now
-                  </a>
+                
+                <div className="flex items-start space-x-3">
+                  <Clock className="h-6 w-6 text-red-500 mt-1" />
+                  <div>
+                    <p className="font-bold text-gray-900">When We're Cutting</p>
+                    <p className="text-gray-700">
+                      Mon-Sat: 9:00 AM - 7:00 PM<br />
+                      Sun: 12:00 PM - 5:00 PM
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <Phone className="h-6 w-6 text-red-500 mt-1" />
+                  <div>
+                    <p className="font-bold text-gray-900">Call Us</p>
+                    <a href="tel:818-324-4056" className="text-red-500 hover:text-red-600 transition-colors">
+                      (818) 324-4056
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div>
+              <p className="text-sm text-gray-600 mb-6">Street parking available</p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="https://maps.google.com/?q=6043+Lockhurst+Dr+Woodland+Hills+CA+91367" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-red-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-600 transition-colors text-center"
+                >
+                  Get Directions
+                </a>
+                <a 
+                  href="tel:818-324-4056"
+                  className="bg-red-100 text-red-600 px-6 py-3 rounded-lg font-bold hover:bg-red-200 transition-colors text-center"
+                >
+                  Call Now
+                </a>
+              </div>
               <div className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center shadow-lg">
                 <div className="text-center">
                   <Scissors className="h-16 w-16 mx-auto mb-4 text-red-500" />
@@ -608,11 +606,14 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img 
-                  src="/src/assets/image-removebg-preview.png" 
-                  alt="Samos Cuts Logo" 
-                  className="w-8 h-8"
-                />
+                <div className="relative">
+                  <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
+                  <img 
+                    src="/src/assets/image-removebg-preview.png" 
+                    alt="Samos Cuts Logo" 
+                    className="w-8 h-8 relative z-10"
+                  />
+                </div>
                 <span className="text-2xl font-bold">Samos Cuts</span>
               </div>
               <p className="text-gray-400">
