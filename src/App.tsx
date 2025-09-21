@@ -112,10 +112,7 @@ function App() {
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center shadow-2xl">
                 <div className="text-center">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
-                    <img src="/src/assets/image-removebg-preview.png" alt="Samos Cuts Logo" className="w-32 h-32 mx-auto mb-4 relative z-10" />
-                  </div>
+                  <Scissors className="w-32 h-32 mx-auto mb-4 text-white" />
                   <p className="text-red-100 text-lg font-bold">Where Legends Get Cut</p>
                 </div>
               </div>
@@ -268,14 +265,27 @@ function App() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            {[1,2,3,4,5,6,7,8].map((item) => (
-              <div key={item} className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-lg flex items-center justify-center hover:shadow-lg transition-shadow">
+            {[
+              "/src/assets/66C3D61C-6705-4265-AA62-6001B2950F40.jpeg",
+              "/src/assets/F7303108-76EE-43A7-B64F-DFD5A253134A.jpeg",
+              "/src/assets/42E55135-FCFC-4F30-A346-8D79E7AA15B4.jpeg",
+              "/src/assets/A2965E05-5AA0-4345-90EB-9E47FBDEA6E7.jpeg",
+              "/src/assets/3E4556FC-EB9F-4ACF-84A8-9D7987C8AA12.jpeg"
+            ].map((imageSrc, index) => (
+              <div key={index} className="aspect-square rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img 
+                  src={imageSrc} 
+                  alt={`Samos Cuts haircut ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+            {/* Add placeholder boxes for remaining grid items */}
+            {[1,2,3].map((item) => (
+              <div key={`placeholder-${item}`} className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-lg flex items-center justify-center hover:shadow-lg transition-shadow">
                 <div className="text-center">
-                  <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
-                    <img src="/src/assets/image-removebg-preview.png" alt="Samos Cuts" className="h-8 w-8 mx-auto mb-2 relative z-10" />
-                  </div>
-                  <p className="text-sm text-red-600 font-bold">Fire Cut</p>
+                  <Scissors className="h-8 w-8 mx-auto mb-2 text-red-500" />
+                  <p className="text-sm text-red-600 font-bold">More Cuts</p>
                 </div>
               </div>
             ))}
@@ -384,9 +394,6 @@ function App() {
             >
               Call Now
             </a>
-            <button className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors border-2 border-white">
-              Book Online
-            </button>
           </div>
         </div>
       </section>
@@ -429,10 +436,7 @@ function App() {
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center shadow-lg">
                 <div className="text-center">
-                  <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
-                    <img src="/src/assets/image-removebg-preview.png" alt="Samos Cuts Logo" className="h-24 w-24 mx-auto mb-4 relative z-10" />
-                  </div>
+                  <Scissors className="h-24 w-24 mx-auto mb-4 text-red-500" />
                   <p className="text-red-600 font-bold text-lg">Real Recognize Real</p>
                 </div>
               </div>
@@ -509,10 +513,7 @@ function App() {
             <div>
               <div className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center shadow-lg">
                 <div className="text-center">
-                  <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
-                    <img src="/src/assets/image-removebg-preview.png" alt="Samos Cuts Logo" className="h-16 w-16 mx-auto mb-4 relative z-10" />
-                  </div>
+                  <Scissors className="h-16 w-16 mx-auto mb-4 text-red-500" />
                   <p className="text-red-600 font-bold">The Spot</p>
                   <p className="text-sm text-red-500">Woodland Hills</p>
                 </div>
@@ -606,10 +607,7 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
-                  <img src="/src/assets/image-removebg-preview.png" alt="Samos Cuts Logo" className="w-8 h-8 relative z-10" />
-                </div>
+                <Scissors className="w-8 h-8 text-red-500" />
                 <span className="text-2xl font-bold">Samos Cuts</span>
               </div>
               <p className="text-gray-400">
