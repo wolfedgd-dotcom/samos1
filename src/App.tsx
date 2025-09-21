@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Phone, MapPin, Clock, Star, Instagram, Scissors, Shield, Calendar, Menu, X, Users, Award, Zap, Heart } from 'lucide-react';
+import BookingForm from './components/BookingForm';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedService, setSelectedService] = useState('');
+  const [showBookingForm, setShowBookingForm] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,6 +13,11 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
+  };
+
+  const openBookingForm = (service = '') => {
+    setSelectedService(service);
+    setShowBookingForm(true);
   };
 
   return (
@@ -181,10 +188,10 @@ function App() {
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-500">{service.duration}</span>
                   <button 
-                    onClick={() => scrollToSection('book')}
+                    onClick={() => openBookingForm(service.title)}
                     className="text-red-500 font-bold hover:text-red-600 transition-colors"
                   >
-                    Get This
+                    Book Now
                   </button>
                 </div>
               </div>
@@ -257,10 +264,10 @@ function App() {
               </div>
               
               <button 
-                onClick={() => scrollToSection('contact')}
+                onClick={() => openBookingForm()}
                 className="bg-red-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-red-600 transition-colors"
               >
-                Get Your Cut
+                Book Online
               </button>
             </div>
           </div>
@@ -367,9 +374,9 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { service: "Adult Cut", description: "Professional haircut and styling", action: () => scrollToSection('contact') },
-              { service: "Kids' Cut", description: "Patient, kid-friendly service", action: () => scrollToSection('contact') },
-              { service: "Cut + Beard", description: "Complete grooming package", action: () => scrollToSection('contact') }
+              { service: "Adult Cut", description: "Professional haircut and styling", action: () => openBookingForm('Adult Haircut') },
+              { service: "Kids' Cut", description: "Patient, kid-friendly service", action: () => openBookingForm('Kids Cut') },
+              { service: "Cut + Beard", description: "Complete grooming package", action: () => openBookingForm('Cut + Beard Combo') }
             ].map((option, index) => (
               <button 
                 key={index}
@@ -399,6 +406,12 @@ function App() {
             >
               Call Now
             </a>
+            <button 
+              onClick={() => openBookingForm()}
+              className="bg-red-100 text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-red-200 transition-colors"
+            >
+              Book Online
+            </button>
           </div>
         </div>
       </section>
@@ -431,10 +444,10 @@ function App() {
               </div>
 
               <button 
-                onClick={() => scrollToSection('contact')}
+                onClick={() => openBookingForm()}
                 className="bg-red-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-600 transition-colors"
               >
-                Visit Us
+                Book Online
               </button>
             </div>
 
@@ -516,6 +529,12 @@ function App() {
                 >
                   Call Now
                 </a>
+                <button 
+                  onClick={() => openBookingForm()}
+                  className="bg-red-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-600 transition-colors"
+                >
+                  Book Online
+                </button>
               </div>
             </div>
           </div>
@@ -659,6 +678,18 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Booking Modal */}
+      {showBookingForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <BookingForm 
+              selectedService={selectedService}
+              onClose={() => setShowBookingForm(false)}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
