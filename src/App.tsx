@@ -602,8 +602,6 @@ function App() {
                     className="w-6 h-6"
                   />
                 </div>
-                  />
-                </div>
                 <span className="text-2xl font-bold">Samos Cuts</span>
               </div>
               <p className="text-gray-400">
