@@ -22,7 +22,11 @@ function App() {
             <div className="flex items-center space-x-2">
               <div className="relative">
                 <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
-                <Scissors className="w-10 h-10 relative z-10 text-red-500" />
+                <img 
+                  src="/src/assets/image-removebg-preview.png" 
+                  alt="Samos Cuts Logo" 
+                  className="w-10 h-10 relative z-10"
+                />
               </div>
               <span className="text-2xl font-bold text-gray-900">Samos Cuts</span>
             </div>
@@ -112,10 +116,11 @@ function App() {
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center shadow-2xl">
                 <div className="text-center">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
-                    <Scissors className="w-32 h-32 relative z-10 text-red-500" />
-                  </div>
+                  <img 
+                    src="/src/assets/image-removebg-preview.png" 
+                    alt="Samos Cuts Logo" 
+                    className="w-32 h-32 mx-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -268,14 +273,14 @@ function App() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
-              "https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&w=400",
-              "https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg?auto=compress&cs=tinysrgb&w=400",
-              "https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg?auto=compress&cs=tinysrgb&w=400",
-              "https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&w=400",
-              "https://images.pexels.com/photos/1570808/pexels-photo-1570808.jpeg?auto=compress&cs=tinysrgb&w=400",
-              "https://images.pexels.com/photos/1805603/pexels-photo-1805603.jpeg?auto=compress&cs=tinysrgb&w=400",
-              "https://images.pexels.com/photos/1570809/pexels-photo-1570809.jpeg?auto=compress&cs=tinysrgb&w=400",
-              "https://images.pexels.com/photos/1805602/pexels-photo-1805602.jpeg?auto=compress&cs=tinysrgb&w=400"
+              "/src/assets/66C3D61C-6705-4265-AA62-6001B2950F40.jpeg",
+              "/src/assets/42E55135-FCFC-4F30-A346-8D79E7AA15B4.jpeg",
+              "/src/assets/A2965E05-5AA0-4345-90EB-9E47FBDEA6E7.jpeg",
+              "/src/assets/F7303108-76EE-43A7-B64F-DFD5A253134A.jpeg",
+              "/src/assets/3E4556FC-EB9F-4ACF-84A8-9D7987C8AA12.jpeg",
+              "/src/assets/74361358-44C3-4DAE-A8EF-3843BA62EC44.jpeg",
+              "/src/assets/CE49D163-46F3-452C-97F3-FFB4887A8751.jpeg",
+              "/src/assets/1F36E7E6-3FDA-4697-8A0B-3C9B17CD5361.jpeg"
             ].map((imageSrc, index) => (
               <div key={index} className="aspect-square rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                 <img 
@@ -603,7 +608,11 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Scissors className="w-8 h-8 text-red-500" />
+                <img 
+                  src="/src/assets/image-removebg-preview.png" 
+                  alt="Samos Cuts Logo" 
+                  className="w-8 h-8"
+                />
                 <span className="text-2xl font-bold">Samos Cuts</span>
               </div>
               <p className="text-gray-400">
