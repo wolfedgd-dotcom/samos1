@@ -116,7 +116,6 @@ function App() {
                     <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
                     <img src="/src/assets/image-removebg-preview.png" alt="Samos Cuts Logo" className="w-32 h-32 relative z-10" />
                   </div>
-                  <p className="text-red-100 text-lg font-bold mt-4">Samos Cuts</p>
                 </div>
               </div>
             </div>
@@ -451,7 +450,7 @@ function App() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            <div className="max-w-2xl mx-auto">
+            <div>
               <div className="bg-red-50 rounded-xl p-8 border border-red-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Find Us Here</h3>
                 
@@ -503,6 +502,16 @@ function App() {
                   >
                     Call Now
                   </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="text-center">
+                  <Scissors className="h-16 w-16 mx-auto mb-4 text-red-500" />
+                  <p className="text-red-600 font-bold">The Spot</p>
+                  <p className="text-sm text-red-500">Woodland Hills</p>
                 </div>
               </div>
             </div>
