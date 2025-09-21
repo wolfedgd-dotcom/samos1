@@ -266,11 +266,14 @@ function App() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
-              "/src/assets/66C3D61C-6705-4265-AA62-6001B2950F40.jpeg",
-              "/src/assets/F7303108-76EE-43A7-B64F-DFD5A253134A.jpeg",
-              "/src/assets/42E55135-FCFC-4F30-A346-8D79E7AA15B4.jpeg",
-              "/src/assets/A2965E05-5AA0-4345-90EB-9E47FBDEA6E7.jpeg",
-              "/src/assets/3E4556FC-EB9F-4ACF-84A8-9D7987C8AA12.jpeg"
+              "https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&w=400",
+              "https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg?auto=compress&cs=tinysrgb&w=400",
+              "https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg?auto=compress&cs=tinysrgb&w=400",
+              "https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&w=400",
+              "https://images.pexels.com/photos/1570808/pexels-photo-1570808.jpeg?auto=compress&cs=tinysrgb&w=400",
+              "https://images.pexels.com/photos/1805603/pexels-photo-1805603.jpeg?auto=compress&cs=tinysrgb&w=400",
+              "https://images.pexels.com/photos/1570809/pexels-photo-1570809.jpeg?auto=compress&cs=tinysrgb&w=400",
+              "https://images.pexels.com/photos/1319461/pexels-photo-1319461.jpeg?auto=compress&cs=tinysrgb&w=400"
             ].map((imageSrc, index) => (
               <div key={index} className="aspect-square rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                 <img 
@@ -278,15 +281,6 @@ function App() {
                   alt={`Samos Cuts haircut ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
-              </div>
-            ))}
-            {/* Add placeholder boxes for remaining grid items */}
-            {[1,2,3].map((item) => (
-              <div key={`placeholder-${item}`} className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-lg flex items-center justify-center hover:shadow-lg transition-shadow">
-                <div className="text-center">
-                  <Scissors className="h-8 w-8 mx-auto mb-2 text-red-500" />
-                  <p className="text-sm text-red-600 font-bold">More Cuts</p>
-                </div>
               </div>
             ))}
           </div>
