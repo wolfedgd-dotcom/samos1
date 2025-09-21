@@ -442,7 +442,11 @@ function App() {
               <div className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center shadow-lg">
                 <div className="text-center">
                   <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Scissors className="h-24 w-24 text-red-500" />
+                    <img 
+                      src="/src/assets/image-removebg-preview.png" 
+                      alt="Samos Cuts Logo" 
+                      className="h-24 w-24"
+                    />
                   </div>
                   <p className="text-red-600 font-bold text-lg">Real Recognize Real</p>
                 </div>
