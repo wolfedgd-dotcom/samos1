@@ -205,7 +205,11 @@ function App() {
             <div className="bg-red-50 rounded-2xl p-8 text-center border-2 border-red-100">
               <div className="relative inline-block mb-6">
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto">
-                  <Scissors className="w-16 h-16 text-red-500" />
+                  <img 
+                    src="/src/assets/image-removebg-preview.png" 
+                    alt="Samos Cuts Logo" 
+                    className="w-16 h-16"
+                  />
                 </div>
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-8">NEW PRICES</h3>
