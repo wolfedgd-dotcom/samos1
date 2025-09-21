@@ -204,8 +204,9 @@ function App() {
           <div className="max-w-2xl mx-auto">
             <div className="bg-red-50 rounded-2xl p-8 text-center border-2 border-red-100">
               <div className="relative inline-block mb-6">
-                <div className="absolute inset-0 bg-white rounded-full transform scale-110"></div>
-                <Scissors className="w-16 h-16 relative z-10 text-red-500" />
+                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto">
+                  <Scissors className="w-16 h-16 text-red-500" />
+                </div>
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-8">NEW PRICES</h3>
               
@@ -436,7 +437,9 @@ function App() {
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center shadow-lg">
                 <div className="text-center">
-                  <Scissors className="h-24 w-24 mx-auto mb-4 text-red-500" />
+                  <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Scissors className="h-24 w-24 text-red-500" />
+                  </div>
                   <p className="text-red-600 font-bold text-lg">Real Recognize Real</p>
                 </div>
               </div>
