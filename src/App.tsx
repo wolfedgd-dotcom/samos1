@@ -670,7 +670,7 @@ function App() {
               <ul className="space-y-2">
                 <li><button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-colors">Services</button></li>
                 <li><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-white transition-colors">Pricing</button></li>
-                <li><button onClick={() => scrollToSection('book')} className="text-gray-400 hover:text-white transition-colors">Book</button></li>
+                <li><button onClick={() => scrollToSection('contact-cta')} className="text-gray-400 hover:text-white transition-colors">Get Cut</button></li>
                 <li><button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-white transition-colors">About</button></li>
               </ul>
             </div>
