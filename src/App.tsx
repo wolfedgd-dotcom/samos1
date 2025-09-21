@@ -283,7 +283,7 @@ function App() {
 
           <div className="text-center">
             <a 
-              href="https://instagram.com/samoscuts" 
+              href="https://instagram.com/samos_cuts" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-red-500 text-white px-8 py-3 rounded-lg hover:bg-red-600 transition-colors"
@@ -579,7 +579,7 @@ function App() {
               <div className="flex items-center justify-center space-x-3">
                 <Instagram className="h-6 w-6 text-red-500" />
                 <a 
-                  href="https://instagram.com/samoscuts" 
+                  href="https://instagram.com/samos_cuts" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-lg text-red-500 hover:text-red-600 transition-colors"
@@ -640,7 +640,7 @@ function App() {
               <h4 className="text-lg font-bold mb-4">Stay Connected</h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://instagram.com/samoscuts" 
+                  href="https://instagram.com/samos_cuts" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-red-400 transition-colors"
