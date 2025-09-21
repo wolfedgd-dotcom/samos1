@@ -27,6 +27,8 @@ function App() {
                   className="w-8 h-8"
                 />
               </div>
+                />
+              </div>
               <span className="text-2xl font-bold text-gray-900">Samos Cuts</span>
             </div>
             
@@ -600,6 +602,8 @@ function App() {
                     src="/src/assets/image-removebg-preview.png" 
                     alt="Samos Cuts Logo" 
                     className="w-6 h-6"
+                  />
+                </div>
                   />
                 </div>
                 <span className="text-2xl font-bold">Samos Cuts</span>
