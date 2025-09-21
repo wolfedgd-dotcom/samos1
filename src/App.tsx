@@ -28,9 +28,6 @@ function App() {
                   className="w-10 h-10 relative z-10"
                 />
               </div>
-                  className="w-10 h-10 relative z-10"
-                />
-              </div>
               <span className="text-2xl font-bold text-gray-900">Samos Cuts</span>
             </div>
             
