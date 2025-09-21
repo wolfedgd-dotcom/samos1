@@ -27,8 +27,6 @@ function App() {
                   className="w-8 h-8"
                 />
               </div>
-                />
-              </div>
               <span className="text-2xl font-bold text-gray-900">Samos Cuts</span>
             </div>
             
